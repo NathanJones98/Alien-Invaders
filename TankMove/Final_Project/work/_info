@@ -1,0 +1,71 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Nathan/Desktop/Final_Project
+vcontrol
+Z1 !s110 1573415810
+!i10b 1
+!s100 7G8f1BzVRE<hiM1TREmD>2
+Ie4YemocF<0g:jTM;QHc[:2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1573415522
+Z4 8TankMove.v
+Z5 FTankMove.v
+L0 32
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1573415810.000000
+Z8 !s107 TankMove.v|
+Z9 !s90 -reportprogress|300|TankMove.v|
+!i113 1
+Z10 tCvgOpt 0
+vposition
+R1
+!i10b 1
+!s100 ^dFLm=>hVlcMMfzQG4>9m0
+IY[QUcF2l@UCMBMHDW2?fD2
+R2
+R0
+R3
+R4
+R5
+L0 63
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+vTankMove
+R1
+!i10b 1
+!s100 zRfR4<QUNMDF7W=obdY9C1
+I`TYaHM1afbYdUczgLLHYn0
+R2
+R0
+R3
+R4
+R5
+L0 2
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+n@tank@move

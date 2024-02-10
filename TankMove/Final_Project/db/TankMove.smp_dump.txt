@@ -1,0 +1,6 @@
+
+State Machine - |TankMove|control:C1|current_state
+Name current_state.moveLeft current_state.stationary current_state.moveRight 
+current_state.stationary 0 0 0 
+current_state.moveRight 0 1 1 
+current_state.moveLeft 1 1 0 

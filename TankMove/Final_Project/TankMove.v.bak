@@ -1,0 +1,48 @@
+module TankMove (input [1:0]KEY, input CLOCK_50, input resetn, output Xpos);
+
+wire initialx, numOfPixToMove, Mleft, Mright;
+
+assign Mleft = KEY[1];
+assign Mright = KEY[0];
+assign clk = CLOCK_50;
+
+reg [2:0]Mstate;
+
+always@(posedge clk)
+if(Mleft == 1'b1 && Mright == 1'b0)
+	Mstate = 2'b10;
+else if (Mleft == 1'b0 && Mright == 1'b1)
+	Mstate = 2'b01;
+else
+	Mstate = 2'b00;
+end
+
+
+endmodule
+
+module control(input Mleft, Mright, clk, Mstate);
+
+reg [3:0] current_state, next_state;
+
+localparam moveLeft = 3'b100, moveRight = 3'b001, stationary = 3'b010;
+    
+
+    always@(*)
+    begin: state_table
+        case (current_state)
+            moveLeft: next_state = (Mstate == 2'b10) ? moveLeft : stationary;
+            moveRight: next_state = (Mstate == 2'b01) ? moveRight : stationary;
+            stationary: begin
+								if (Mstate == 2'b10)
+								next_state = moveLeft;
+								else if (Mstate == 2'b10)
+								next_state = moveRight;
+								else
+								next_state = stationary;
+								end
+            default: next_state = stationary;
+        endcase
+    end
+	 
+endmodule
+    
